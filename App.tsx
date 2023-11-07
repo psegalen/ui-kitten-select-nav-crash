@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ApplicationProvider, Select, SelectItem} from '@ui-kitten/components';
+import {ApplicationProvider, Layout, Select, SelectItem} from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
 import React from 'react';
 import {Button, Text, View, StyleSheet} from 'react-native';
@@ -19,7 +19,7 @@ const HomeScreen = ({navigation}: WithNavProps) => (
   </View>
 );
 const SecondScreen = ({navigation}: WithNavProps) => (
-  <View style={styles.container}>
+  <Layout style={styles.container}>
     <Text style={styles.marginBottom}>Second Screen</Text>
     <Select style={styles.marginBottom}>
       <SelectItem title="One" />
@@ -27,7 +27,7 @@ const SecondScreen = ({navigation}: WithNavProps) => (
       <SelectItem title="Three" />
     </Select>
     <Button title="Next" onPress={() => navigation?.navigate?.('Third')} />
-  </View>
+  </Layout>
 );
 const ThirdScreen = ({navigation}: WithNavProps) => (
   <View style={styles.container}>
